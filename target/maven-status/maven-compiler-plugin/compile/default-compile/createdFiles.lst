@@ -1,0 +1,7 @@
+eu\craftok\api\rank\RankManager.class
+eu\craftok\api\user\User.class
+eu\craftok\api\CraftokApi.class
+eu\craftok\api\user\UserManager.class
+eu\craftok\api\CraftokProvider.class
+eu\craftok\api\rank\Rank.class
+eu\craftok\api\rank\RankPriority.class
