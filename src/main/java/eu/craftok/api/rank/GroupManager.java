@@ -10,11 +10,11 @@ public interface GroupManager {
      * @param id the group's id
      * @return a future of an optional {@link Group}
      */
-    CompletableFuture<Optional<Group>> getGroup(String id);
+    Optional<Group> getGroup(String id);
 
     /**
      * Used to look all the current luckperms groups
      * @return a set of all the groups
      */
-    CompletableFuture<Set<Group>> getRanks();
+    Set<Group> getRanks();
 }
