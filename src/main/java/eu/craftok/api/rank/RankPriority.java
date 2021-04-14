@@ -1,5 +1,6 @@
 package eu.craftok.api.rank;
 
+@Deprecated
 public enum RankPriority {
     LOW("Basse"),
     MEDIUM("Moyenne"),
