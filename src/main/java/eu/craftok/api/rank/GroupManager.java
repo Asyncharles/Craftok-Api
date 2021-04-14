@@ -16,5 +16,5 @@ public interface GroupManager {
      * Used to look all the current luckperms groups
      * @return a set of all the groups
      */
-    Set<Group> getRanks();
+    Set<Group> getGroups();
 }
