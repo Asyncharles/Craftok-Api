@@ -10,6 +10,10 @@ public class CraftokProvider {
     private CraftokProvider() {
     }
 
+    /**
+     * Used to get the api instance
+     * @return the api instance
+     */
     public static CraftokApi getApi() {
         if (instance == null) {
             throw new IllegalStateException("The Craftok API has not been loaded. Please check your register!");
@@ -17,11 +21,18 @@ public class CraftokProvider {
         return instance;
     }
 
+    /**
+     * Registering the api instance
+     * @param craftok the api instance
+     */
     public static void register(CraftokApi craftok) {
         instance = craftok;
         LOGGER.info("API instance registered!");
     }
 
+    /**
+     * Shutting down the api instance
+     */
     public static void shutdown() {
         instance = null;
         LOGGER.info("API instance unregistered!");
