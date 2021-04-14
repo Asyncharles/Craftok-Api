@@ -1,7 +1,4 @@
 package eu.craftok.api.user;
-
-import eu.craftok.api.rank.Rank;
-
 import java.util.UUID;
 
 public interface User {
@@ -43,9 +40,9 @@ public interface User {
 
     /**
      *
-     * @return the user's rank {@link Rank}
+     * @return the user's group Id {@link eu.craftok.api.rank.Group}
      */
-    Rank getRank();
+    String getGroupId();
 
     /**
      *

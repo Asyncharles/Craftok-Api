@@ -1,14 +1,14 @@
 package eu.craftok.api;
 
-import eu.craftok.api.rank.RankManager;
+import eu.craftok.api.rank.GroupManager;
 import eu.craftok.api.user.UserManager;
 
 public interface CraftokApi {
     /**
      *
-     * @return the {@link RankManager} instance
+     * @return the {@link GroupManager} instance
      */
-    RankManager getRankManager();
+    GroupManager getGroupManager();
 
     /**
      *
