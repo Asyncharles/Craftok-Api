@@ -8,7 +8,7 @@ public interface GroupManager {
     /**
      * Used to look up a group (primary group) in the luckperms database
      * @param id the group's id
-     * @return a future of an optional {@link Group}
+     * @return an optional {@link Group}
      */
     Optional<Group> getGroup(String id);
 

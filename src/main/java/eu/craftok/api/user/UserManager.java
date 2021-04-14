@@ -9,7 +9,7 @@ public interface UserManager {
      * Used when a players logs onto the Network
      * Checks if the user is registered in the database (Higher performances)
      * @param uuid the user's unique ID
-     * @return a future of the user
+     * @return the {@link User}
      */
     User loadUser(UUID uuid);
 
@@ -17,14 +17,14 @@ public interface UserManager {
      * Used to look up a user by their minecraft account name
      * Can be unsafe
      * @param name the user's name
-     * @return a future of the user
+     * @return an optional of {@link User}
      */
     Optional<User> getUserByName(String name);
 
     /**
      * Used to look a user by their unique ID
      * @param uuid the user's unique ID
-     * @return a future of the user
+     * @return the {@link User}
      */
     User getUser(UUID uuid);
 
