@@ -34,9 +34,26 @@ public interface User {
 
     /**
      *
+     * @param nick the new nick of the user
+     */
+    void setNick(String nick);
+
+    /**
+     * Removes the user's nick
+     */
+    void removeNick();
+
+    /**
+     *
      * @return the user's prefix that override's any other prefix
      */
     String getPrefixOverride();
+
+    /**
+     *
+     * @param prefixOverride the new prefix of the user
+     */
+    void setPrefixOverride(String prefixOverride);
 
     /**
      *
@@ -55,6 +72,11 @@ public interface User {
      * @return the last connection of the user's
      */
     long getLastConnection();
+
+    /**
+     * update's the user's last connection
+     */
+    void updateLastConnection();
 
     /**
      *
