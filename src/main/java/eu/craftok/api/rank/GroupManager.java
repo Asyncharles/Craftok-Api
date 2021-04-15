@@ -1,5 +1,6 @@
 package eu.craftok.api.rank;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
@@ -25,4 +26,11 @@ public interface GroupManager {
      * @return the user's {@link Group}
      */
     Group getUserGroup(UUID uuid);
+
+    /**
+     *
+     * @param id
+     * @return
+     */
+    Optional<Set<UUID>> getGroupUsers(String id);
 }
