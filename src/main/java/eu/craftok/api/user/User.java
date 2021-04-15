@@ -132,5 +132,5 @@ public interface User {
      * Get the user's friends
      * @param callback a consumer callback
      */
-    void getFriends(Consumer<List<UUID>> callback);
+    void getFriends(Consumer<List<User>> callback);
 }
