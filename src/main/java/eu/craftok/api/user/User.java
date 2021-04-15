@@ -18,6 +18,12 @@ public interface User {
 
     /**
      *
+     * @return the api version used for the schema
+     */
+    String getApiVersionSchema();
+
+    /**
+     *
      * @return the user's display name on the network
      */
     String getPlayerDisplayName();
