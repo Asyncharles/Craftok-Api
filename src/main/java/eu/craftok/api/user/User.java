@@ -125,7 +125,6 @@ public interface User {
     /**
      * Get the user's friends
      * @param callback a consumer callback
-     * @return a list of Unique Id
      */
-    List<UUID> getFriends(Consumer<List<UUID>> callback);
+    void getFriends(Consumer<List<UUID>> callback);
 }
