@@ -1,5 +1,7 @@
 package eu.craftok.api.user;
+import java.util.List;
 import java.util.UUID;
+import java.util.function.Consumer;
 
 public interface User {
     /**
@@ -54,12 +56,6 @@ public interface User {
      * @param prefixOverride the new prefix of the user
      */
     void setPrefixOverride(String prefixOverride);
-
-    /**
-     *
-     * @return the user's group Id {@link eu.craftok.api.rank.Group}
-     */
-    String getGroupId();
 
     /**
      *
@@ -125,4 +121,11 @@ public interface User {
      * @param xp the new value of the user's experience amount, {@code 0} to reset
      */
     void setNetworkXp(float xp);
+
+    /**
+     * Get the user's friends
+     * @param callback a consumer callback
+     * @return a list of Unique Id
+     */
+    List<UUID> getFriends(Consumer<List<UUID>> callback);
 }
