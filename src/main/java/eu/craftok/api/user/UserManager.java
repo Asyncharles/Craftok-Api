@@ -33,7 +33,7 @@ public interface UserManager {
      * Used when a players logs off the Network or
      * to save some values
      * @param user the new user with updated values
-     * @return an infinite and deep void
+     * @return the updated {@link User}
      */
-    void saveUser(User user);
+    User saveUser(User user);
 }
