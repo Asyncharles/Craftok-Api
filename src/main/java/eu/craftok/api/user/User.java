@@ -29,6 +29,12 @@ public interface User {
     String getPlayerDisplayName();
 
     /**
+     * Sets the user's display name on the networl
+     * @param displayName the new display name
+     */
+    void setPlayerDisplayName(String displayName);
+
+    /**
      *
      * @return {@code true} if the user has a payed mojang account, {@code false} otherwise
      */
