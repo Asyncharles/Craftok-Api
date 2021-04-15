@@ -17,6 +17,12 @@ public interface User {
     String getName();
 
     /**
+     * Updates the user's name
+     * @param name the new name
+     */
+    void updateName(String name);
+
+    /**
      *
      * @return the api version used for the schema
      */
