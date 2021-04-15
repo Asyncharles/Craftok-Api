@@ -8,6 +8,7 @@ public interface UserManager {
     /**
      * Used when a players logs onto the Network
      * Checks if the user is registered in the database (Higher performances)
+     * Updates the user's schema depending on the api version
      * @param uuid the user's unique ID
      * @return the {@link User}
      */
