@@ -4,8 +4,8 @@ import java.util.logging.Logger;
 
 public class CraftokProvider {
     private static CraftokApi instance = null;
-
     private final static Logger LOGGER = Logger.getLogger("PROVIDER");
+    public final static String API_VERSION = "0.1.3";
 
     private CraftokProvider() {
     }
