@@ -1,11 +1,12 @@
 package eu.craftok.api;
 
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class CraftokProvider {
     private static CraftokApi instance = null;
     private final static Logger LOGGER = Logger.getLogger("PROVIDER");
-    public final static String API_VERSION = "0.1.10";
+    public final static String API_VERSION = "0.1.11";
 
     private CraftokProvider() {
     }
@@ -27,6 +28,7 @@ public class CraftokProvider {
      */
     public static void register(CraftokApi craftok) {
         instance = craftok;
+        LOGGER.setLevel(Level.ALL);
         LOGGER.info("API instance registered!");
     }
 
