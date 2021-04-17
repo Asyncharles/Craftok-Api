@@ -24,9 +24,20 @@ public interface User {
 
     /**
      *
+     * @return a list of the user's previous name
+     */
+    List<String> getPreviousNames();
+
+    /**
+     *
      * @return the api version used for the schema
      */
     String getApiVersionSchema();
+
+    /**
+     * Updates the api version user for the schema
+     */
+    void updateApiVersionSchema();
 
     /**
      *
@@ -35,7 +46,7 @@ public interface User {
     String getPlayerDisplayName();
 
     /**
-     * Sets the user's display name on the networl
+     * Sets the user's display name on the network
      * @param displayName the new display name
      */
     void setPlayerDisplayName(String displayName);
