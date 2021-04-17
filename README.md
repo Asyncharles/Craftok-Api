@@ -32,7 +32,7 @@ Craftok api = CraftokProvider.getApi();
 
 Ceci est une api encore en développement et subira de lourdes modifications dans le futur proche et sera adapté au Network! 
 
-###Recuperation et Utilisation d'un User
+### Recuperation et Utilisation d'un User
 
 ```java
 UserManager userManager = api.getUserManager();
@@ -59,7 +59,7 @@ if (optional.isPresent) {
 User user = userManager.loadUser(uuid);
 ```
 
-###Recuperation d'un Group  
+### Recuperation d'un Group  
 
 ```java
 GroupManager groupManager = api.getGroupManager();
