@@ -17,6 +17,12 @@ public interface Punishment {
 
     /**
      *
+     * @return the date of when the punishment was issued
+     */
+    long getIssuedDate();
+
+    /**
+     *
      * @return the expiry time of the punishment
      */
     long getExpiryTime();
