@@ -8,7 +8,7 @@ public interface PunishmentManager {
      * Used to punish a user
      * @param punishment the punishment applied to the user
      */
-    void punish(Punishment punishment);
+    void punish(PunishmentBuilder punishment);
 
     /**
      * Get the punishments of a user
@@ -39,5 +39,11 @@ public interface PunishmentManager {
      * @return a list of specific {@link Punishment}
      */
     List<Punishment> getIssuedPunishments(UUID uuid, Punishment.PunishmentType punishmentType);
+
+    /**
+     * Get the total punishments of a specific punishment type
+     * @param punishmentType the punishment type
+     * @return the total punishments
+     */
     int getTotalPunishments(Punishment.PunishmentType punishmentType);
 }
