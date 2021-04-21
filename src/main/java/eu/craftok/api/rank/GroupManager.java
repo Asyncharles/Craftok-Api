@@ -1,15 +1,13 @@
 package eu.craftok.api.rank;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 public interface GroupManager {
     /**
      * Used to look up a group (primary group) in the luckperms database
-     * @param id the group's id
+     * @param id the {@link Group} id
      * @return an optional {@link Group}
      */
     Optional<Group> getGroup(String id);
@@ -29,8 +27,8 @@ public interface GroupManager {
 
     /**
      *
-     * @param id
-     * @return
+     * @param id the {@link Group} id
+     * @return a Set of {@link UUID}
      */
     Optional<Set<UUID>> getGroupUsers(String id);
 }
