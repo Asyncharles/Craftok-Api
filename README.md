@@ -25,7 +25,7 @@ if (service != null) {
 ### Utilisation du singleton
 
 ```java
-Craftok api = CraftokProvider.getApi();
+CraftokApi api = CraftokProvider.getApi();
 ```
 
 ## Information / Under heavy development
