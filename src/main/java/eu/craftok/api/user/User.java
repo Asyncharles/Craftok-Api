@@ -152,6 +152,14 @@ public interface User {
     void setNetworkXp(float xp);
 
     /**
+     *
+     * @return the user's network experience based from {@link #getNetworkXp()}
+     */
+    default float getNetworkLevel() {
+        return (float) ((Math.sqrt(getNetworkXp() + 15312.5) - 125 / Math.sqrt(2)) / (25 * Math.sqrt(2)));
+    }
+
+    /**
      * Get the user's friends
      * @param callback a consumer callback
      */
