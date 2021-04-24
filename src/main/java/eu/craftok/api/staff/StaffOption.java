@@ -46,4 +46,10 @@ public interface StaffOption {
      * @return {@code true} if the staff has reports alerts toggled, {@code false} otherwise
      */
     boolean hasReportsToggled();
+
+    /**
+     *
+     * @return the total sanctions given by the staff
+     */
+    int totalSanctionsApplied();
 }

@@ -38,11 +38,4 @@ public interface StaffOptionManager {
      * @param uuid the staff's Unique Id
      */
     void removeStaffOptions(UUID uuid);
-
-    @Deprecated
-    /*
-     * A staff handling task
-     * Deprecated - Removal planned for 0.1.14
-     */
-    void staffHandlerTask();
 }
