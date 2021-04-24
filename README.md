@@ -16,16 +16,13 @@ Veuillez ne creer qu'une seule instance de l'Api au sein de votre projet.
 ### Utilisation de l'Api avec Bukkit ServicesManager
 
 ```java
-RegisteredServiceProvider<CraftokApi> service = Bukkit.getServicesManager().getRegistration(CraftokApi.class);
-if (service != null) {
-    CraftokApi api = service.getProvider();
-}
+Il est desormais impossible d'utiliser le ServicesManager pour utiliser l'Api depuis la version 0.1.14
 ```
 
-### Utilisation du singleton
+### Utilisation de l'Api Builder
 
 ```java
-CraftokApi api = CraftokProvider.getApi();
+CraftokApi api = new CraftokApiBuilder().create();
 ```
 
 ## Information / Under heavy development
