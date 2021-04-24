@@ -15,9 +15,7 @@ Veuillez ne creer qu'une seule instance de l'Api au sein de votre projet.
 
 ### Utilisation de l'Api avec Bukkit ServicesManager
 
-```java
 Il est desormais impossible d'utiliser le ServicesManager pour utiliser l'Api depuis la version 0.1.14
-```
 
 ### Utilisation de l'Api Builder
 
