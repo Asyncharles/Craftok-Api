@@ -6,22 +6,29 @@ import java.util.logging.Logger;
 public class CraftokProvider {
     private static CraftokApi instance = null;
     private final static Logger LOGGER = Logger.getLogger("PROVIDER");
-    private final static String commonKey = new String("<3");
+    private final static byte[] b = new byte[] {51,70,66,68,57,67,69,54,51,70,56,68,57,54,55,57};
+    private final static String commonKey = new String(b);
 
     private static boolean tabOverride;
     private static boolean nameTagOverride;
     private static boolean chatFormatOverride;
     private static boolean activeDatabaseActor;
     private static boolean activeCacheHandler;
+    private static boolean logApiResponse;
+    private static int cacheHandlerTimer;
+    private static int nThreadLog;
 
-    public final static String API_VERSION = "0.2.1";
+    public final static String API_VERSION = "0.2.2";
 
-    protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler) {
+    protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler, boolean logApiResponse, int cacheHandlerTimer, int nThreadLog) {
         CraftokProvider.tabOverride = tabOverride;
         CraftokProvider.nameTagOverride = nameTagOverride;
         CraftokProvider.chatFormatOverride = chatFormatOverride;
         CraftokProvider.activeDatabaseActor = activeDatabaseActor;
         CraftokProvider.activeCacheHandler = activeCacheHandler;
+        CraftokProvider.logApiResponse = logApiResponse;
+        CraftokProvider.cacheHandlerTimer = cacheHandlerTimer;
+        CraftokProvider.nThreadLog = nThreadLog;
     }
 
     /**
@@ -47,7 +54,7 @@ public class CraftokProvider {
         if (!key.equals(commonKey) ) {
             throw new SecurityException("Attempt to access the Common Api - Wrong key!");
         }
-        return new CommonProvider(instance, tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler);
+        return new CommonProvider(instance, tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler, logApiResponse, cacheHandlerTimer, nThreadLog);
     }
 
     /**
