@@ -45,17 +45,24 @@ public interface Report {
 
     /**
      *
-     * @param callback a consumer callback
      * @return the {@link ReportResult}
      */
-    ReportResult getResult(Consumer<ReportResult> callback);
+    ReportResult getResult();
+
+    /**
+     * Set the result of the {@link Report}
+     * @param reportResult the new {@link ReportResult}
+     */
+    void setResult(ReportResult reportResult);
 
     /**
      * Types of Results
+     * {@link #AWAITING}
      * {@link #ACCEPTED}
      * {@link #DENIED}
      */
     enum ReportResult {
+        AWAITING,
         ACCEPTED,
         DENIED
     }
