@@ -164,4 +164,10 @@ public interface User {
      * @param callback a consumer callback
      */
     void getFriends(Consumer<List<User>> callback);
+
+    /**
+     *
+     * @return the user's {@link UserParameters}
+     */
+    UserParameters getUserParameters();
 }
