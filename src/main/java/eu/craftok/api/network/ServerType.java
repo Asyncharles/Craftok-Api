@@ -73,5 +73,4 @@ public enum ServerType {
     public static Optional<ServerType> fetchServerTypeByTask(ServicesTask task) {
         return Arrays.stream(values()).filter(st -> Arrays.asList(st.getServiceTask()).contains(task)).findFirst();
     }
-
 }
