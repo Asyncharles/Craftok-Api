@@ -2,7 +2,6 @@ package eu.craftok.api.user;
 
 import java.util.Optional;
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 public interface UserManager {
     /**
@@ -24,7 +23,7 @@ public interface UserManager {
 
     /**
      * Used to look a user by their unique ID
-     * @param uuid the user's unique ID
+     * @param uuid the user's unique ID {@link UUID}
      * @return the {@link User}
      */
     User getUser(UUID uuid);
@@ -36,4 +35,19 @@ public interface UserManager {
      * @return the updated {@link User}
      */
     User saveUser(User user);
+
+    /**
+     * Used to look a user by their unique ID in the cache memory
+     * @param uuid the users unique ID {@link UUID}
+     * @return the {@link User}
+     */
+    User getCacheUser(UUID uuid);
+
+    /**
+     * Get a user's formatted name
+     * Format : {@link eu.craftok.api.rank.Group} prefix + name
+     * @param uuid the user's unique ID {@link UUID}
+     * @return the user's formatted name
+     */
+    String getUserFormattedName(UUID uuid);
 }
