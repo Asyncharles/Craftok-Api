@@ -59,6 +59,17 @@ public interface User {
 
     /**
      *
+     * @return {@code true} if the user is online, {@code false} otherwise
+     */
+    boolean isOnline();
+
+    /**
+     * Set if the user is online or offline
+     */
+    void setOnline();
+
+    /**
+     *
      * @return the user's nickname
      */
     String getNick();
@@ -118,7 +129,7 @@ public interface User {
     /**
      *
      * @return the user's coins
-     */
+     */ 
     int getCoins();
 
     /**
