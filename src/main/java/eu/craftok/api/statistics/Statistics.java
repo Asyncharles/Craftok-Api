@@ -10,6 +10,14 @@ public interface Statistics {
     <T> T get(String key);
 
     /**
+     * Get a statistic
+     * @param key the key of the statistic
+     * @param <T> the generic type
+     * @return the statistic
+     */
+    <T> T get(String key, T t);
+
+    /**
      * Check if the statistic exists
      * @param key the key of the statistic
      * @return {@code true} if the statistic exists, {@code false} otherwise
