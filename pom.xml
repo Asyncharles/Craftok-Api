@@ -6,11 +6,19 @@
 
     <groupId>eu.craftok</groupId>
     <artifactId>CraftokApi</artifactId>
-    <version>0.2.6</version>
+    <version>0.3.0</version>
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
+
+    <developers>
+        <developer>
+            <id>Aksyo</id>
+            <name>Charles</name>
+            <email>finalvoiddev@gmail.com</email>
+        </developer>
+    </developers>
 
 </project>
