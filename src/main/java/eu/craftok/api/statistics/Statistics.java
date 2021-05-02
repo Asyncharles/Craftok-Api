@@ -4,11 +4,10 @@ public interface Statistics {
     /**
      * Get a statistic
      * @param key the key of the statistic
-     * @param c the type of the statistic
      * @param <T> the generic type
      * @return the statistic
      */
-    <T> T get(String key, T c);
+    <T> T get(String key);
 
     /**
      * Check if the statistic exists
@@ -29,10 +28,26 @@ public interface Statistics {
     /**
      * Add a statistic
      * @param key the key of the statistic
-     * @param c the type of the statistic
+     * @param c the statistic's value
      * @param <T> the generic type
      */
     <T> void add(String key, T c);
+
+    /**
+     * Increment a statistic
+     * @param key the key of statistic
+     * @param v the increment value
+     * @return the incremented value
+     */
+    int getAndIncrement(String key, int v);
+
+    /**
+     * Set a statistic
+     * @param key the key of the statistic
+     * @param c the statistic's value
+     * @param <T> the generic type
+     */
+    <T> void set(String key, T c);
 
     /**
      * Remove a statistic
