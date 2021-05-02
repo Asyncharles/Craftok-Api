@@ -4,6 +4,7 @@ import eu.craftok.api.punishments.PunishmentManager;
 import eu.craftok.api.rank.GroupManager;
 import eu.craftok.api.staff.StaffOptionManager;
 import eu.craftok.api.staff.reports.ReportHandler;
+import eu.craftok.api.statistics.StatisticManager;
 import eu.craftok.api.user.UserManager;
 
 public interface CraftokApi {
@@ -36,4 +37,10 @@ public interface CraftokApi {
      * @return the {@link ReportHandler} instance
      */
     ReportHandler getReportHandler();
+
+    /**
+     *
+     * @return the {@link StatisticManager} instance
+     */
+    StatisticManager getStatistics();
 }

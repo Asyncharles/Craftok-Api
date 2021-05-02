@@ -1,6 +1,6 @@
 package eu.craftok.api.statistics;
 
-public interface DataContainer {
+public interface Statistics {
     /**
      * Get a statistic
      * @param key the key of the statistic
@@ -13,10 +13,9 @@ public interface DataContainer {
     /**
      * Check if the statistic exists
      * @param key the key of the statistic
-     * @param <T> the generic type
      * @return {@code true} if the statistic exists, {@code false} otherwise
      */
-    <T> boolean has(String key);
+    boolean has(String key);
 
     /**
      * Check if the statistic exists
@@ -49,4 +48,9 @@ public interface DataContainer {
      * @return the {@link T} statistic removed
      */
     <T> T remove(String key, T c);
+
+    /**
+     * Save the changes
+     */
+    void save();
 }
