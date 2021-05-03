@@ -51,12 +51,21 @@ public interface Statistics {
 
     /**
      * Adds a nested object in the statistic (e.g: "jumpleague.kills" : 10)
-     * @param key the key of the statistic
+     * @param key the key of the nested object
+     * @param <T> the generic type
+     * @return {@link Statistics}
+     */
+    <T> Statistics addNestedObject(String key);
+
+    /**
+     * Adds a nested object in the statistic (e.g: "jumpleague.kills" : 10)
+     * @param key the key of the nested object
+     * @param fieldKey the key of the field
      * @param c the statistic's value
      * @param <T> the generic type
      * @return {@link Statistics}
      */
-    <T> Statistics addNestedObject(String key, T c);
+    <T> Statistics addNestedObject(String key, String fieldKey, T c);
 
     /**
      * Increment a statistic
