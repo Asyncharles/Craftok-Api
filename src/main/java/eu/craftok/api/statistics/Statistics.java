@@ -38,16 +38,34 @@ public interface Statistics {
      * @param key the key of the statistic
      * @param c the statistic's value
      * @param <T> the generic type
+     * @return {@link Statistics}
      */
-    <T> void add(String key, T c);
+    <T> Statistics add(String key, T c);
+
+    /**
+     * Adds a nested object in the statistic (e.g: "jumpleague.kills" : 10)
+     * @param key the key of the statistic
+     * @param c the statistic's value
+     * @param <T> the generic type
+     * @return {@link Statistics}
+     */
+    <T> Statistics addNestedObject(String key, T c);
 
     /**
      * Increment a statistic
      * @param key the key of statistic
      * @param v the increment value
-     * @return the incremented value
+     * @return the incremented value {@link Integer}
      */
     int getAndIncrement(String key, int v);
+
+    /**
+     * Increment a statistic
+     * @param key the key of statistic
+     * @param v the increment value
+     * @return the incremented value {@link Long}
+     */
+    long getAndIncrement(String key, long v);
 
     /**
      * Set a statistic
@@ -55,13 +73,13 @@ public interface Statistics {
      * @param c the statistic's value
      * @param <T> the generic type
      */
-    <T> void set(String key, T c);
+    <T> Statistics set(String key, T c);
 
     /**
      * Remove a statistic
      * @param key the of the statistic
      */
-    void remove(String key);
+    Statistics remove(String key);
 
     /**
      * Remove a statistic
