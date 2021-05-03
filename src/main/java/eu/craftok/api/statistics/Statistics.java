@@ -18,6 +18,13 @@ public interface Statistics {
     <T> T get(String key, T t);
 
     /**
+     * Get a nested object
+     * @param key the key of the nested object
+     * @return {@link Statistics}
+     */
+    Statistics getNestedObject(String key);
+
+    /**
      * Check if the statistic exists
      * @param key the key of the statistic
      * @return {@code true} if the statistic exists, {@code false} otherwise
