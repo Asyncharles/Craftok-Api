@@ -1,4 +1,7 @@
 package eu.craftok.api.user;
+import eu.craftok.api.CraftokProvider;
+import eu.craftok.api.network.ServicesTask;
+
 import java.util.List;
 import java.util.UUID;
 import java.util.function.Consumer;
@@ -181,4 +184,20 @@ public interface User {
      * @return the user's {@link UserParameters}
      */
     UserParameters getUserParameters();
+
+    /**
+     * Send a message to the user
+     * @param message the message
+     */
+    default void sendMessage(String message) {
+        CraftokProvider.getRawApi().getCraftokNetwork().getPlayerExecutor().sendMessage(getUniqueID(), message);
+    }
+
+    /**
+     * Connect the user to a task
+     * @param servicesTask the {@link ServicesTask}
+     */
+    default void connect(ServicesTask servicesTask) {
+        CraftokProvider.getRawApi().getCraftokNetwork().getPlayerExecutor().connectToTask(getUniqueID(), servicesTask);
+    }
 }

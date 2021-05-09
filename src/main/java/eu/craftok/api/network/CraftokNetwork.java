@@ -20,4 +20,16 @@ public interface CraftokNetwork {
      * @param task the {@link ServicesTask} used to create the node
      */
     void createCloudService(ServicesTask task);
+
+    /**
+     *
+     * @return the {@link PlayerExecutor} instance
+     */
+    PlayerExecutor getPlayerExecutor();
+
+    /**
+     *
+     * @return {@link NetworkMaintenance}
+     */
+    NetworkMaintenance getNetworkMaintenance();
 }
