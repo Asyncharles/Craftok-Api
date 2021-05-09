@@ -15,7 +15,7 @@ public interface Statistics {
      * @param <T> the generic type
      * @return the statistic
      */
-    <T> T get(String key, T t);
+    <T> T get(String key, Class<T> t);
 
     /**
      * Get a nested object
@@ -104,7 +104,7 @@ public interface Statistics {
      * @param <T> the generic type
      * @return the {@link T} statistic removed
      */
-    <T> T remove(String key, T c);
+    <T> T remove(String key, Class<T> c);
 
     /**
      * Save the changes
