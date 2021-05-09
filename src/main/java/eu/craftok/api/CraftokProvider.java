@@ -18,7 +18,7 @@ public class CraftokProvider {
     private static int cacheHandlerTimer;
     private static int nThreadLog;
 
-    public final static String API_VERSION = "0.3.6";
+    public final static String API_VERSION = "0.3.8";
 
     protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler, boolean logApiResponse, int cacheHandlerTimer, int nThreadLog) {
         CraftokProvider.tabOverride = tabOverride;
@@ -36,6 +36,17 @@ public class CraftokProvider {
      * @return the api instance
      */
     public CraftokApi getApi() {
+        if (CraftokProvider.instance == null) {
+            throw new IllegalStateException("The Craftok API has not been loaded. Please check your register!");
+        }
+        return CraftokProvider.instance;
+    }
+
+    /**
+     * Used to get the raw api instance (without the builder)
+     * @return the api instance
+     */
+    public static CraftokApi getRawApi() {
         if (CraftokProvider.instance == null) {
             throw new IllegalStateException("The Craftok API has not been loaded. Please check your register!");
         }
@@ -63,8 +74,7 @@ public class CraftokProvider {
      */
     public static void register(CraftokApi craftok) {
         instance = craftok;
-        LOGGER.setLevel(Level.ALL);
-        LOGGER.info("API instance registered!");
+        LOGGER.log(Level.ALL, "API instance registered!");
     }
 
     /**
