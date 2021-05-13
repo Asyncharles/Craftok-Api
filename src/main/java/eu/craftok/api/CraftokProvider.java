@@ -15,18 +15,20 @@ public class CraftokProvider {
     private static boolean activeDatabaseActor;
     private static boolean activeCacheHandler;
     private static boolean logApiResponse;
+    private static boolean isLobby;
     private static int cacheHandlerTimer;
     private static int nThreadLog;
 
-    public final static String API_VERSION = "0.3.8";
+    public final static String API_VERSION = "0.3.9";
 
-    protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler, boolean logApiResponse, int cacheHandlerTimer, int nThreadLog) {
+    protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler, boolean logApiResponse, boolean isLobby, int cacheHandlerTimer, int nThreadLog) {
         CraftokProvider.tabOverride = tabOverride;
         CraftokProvider.nameTagOverride = nameTagOverride;
         CraftokProvider.chatFormatOverride = chatFormatOverride;
         CraftokProvider.activeDatabaseActor = activeDatabaseActor;
         CraftokProvider.activeCacheHandler = activeCacheHandler;
         CraftokProvider.logApiResponse = logApiResponse;
+        CraftokProvider.isLobby = isLobby;
         CraftokProvider.cacheHandlerTimer = cacheHandlerTimer;
         CraftokProvider.nThreadLog = nThreadLog;
     }
@@ -65,7 +67,7 @@ public class CraftokProvider {
         if (!key.equals(commonKey) ) {
             throw new SecurityException("Attempt to access the Common Api - Wrong key!");
         }
-        return new CommonProvider(instance, tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler, logApiResponse, cacheHandlerTimer, nThreadLog);
+        return new CommonProvider(instance, tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler, logApiResponse, isLobby, cacheHandlerTimer, nThreadLog);
     }
 
     /**
