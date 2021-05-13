@@ -62,7 +62,7 @@ public enum ServerType {
      * @return an option of {@link ServerType}
      */
     public static Optional<ServerType> fetchServerTypeByPrefix(String prefix) {
-        return Arrays.stream(values()).filter(st -> st.getPrefix().equalsIgnoreCase(prefix)).findFirst();
+        return Arrays.stream(values()).filter(st -> st.getPrefix().equalsIgnoreCase((prefix.contains("-") ? prefix.split("-")[0] : prefix))).findFirst();
     }
 
     /**
