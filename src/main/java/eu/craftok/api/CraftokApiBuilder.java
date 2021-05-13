@@ -7,6 +7,7 @@ public class CraftokApiBuilder {
     private boolean activeDatabaseActor = false;
     private boolean activeCacheHandler =  false;
     private boolean logApiResponse = false;
+    private boolean isLobby = false;
     private int cacheHandlerTimer = 0;
     private int nThreadLog = 1;
 
@@ -45,7 +46,12 @@ public class CraftokApiBuilder {
         return this;
     }
 
+    public CraftokApiBuilder setLobbyServer() {
+        this.isLobby = true;
+        return this;
+    }
+
     public CraftokApi create() {
-        return new CraftokProvider(tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler, logApiResponse, cacheHandlerTimer, nThreadLog).getApi();
+        return new CraftokProvider(tabOverride, nameTagOverride, chatFormatOverride, activeDatabaseActor, activeCacheHandler, logApiResponse, isLobby, cacheHandlerTimer, nThreadLog).getApi();
     }
 }

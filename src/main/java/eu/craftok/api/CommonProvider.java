@@ -8,6 +8,7 @@ public class CommonProvider {
     private final boolean activeDatabaseActor;
     private final boolean activeCacheHandler;
     private final boolean logApiResponse;
+    private final boolean isLobby;
     private final int cacheHandlerTimer;
     private final int nThreadLog;
 
@@ -18,6 +19,7 @@ public class CommonProvider {
                           final boolean activeDatabaseActor,
                           final boolean activeCacheHandler,
                           final boolean logApiResponse,
+                          final boolean isLobby,
                           final int cacheHandlerTimer,
                           final int nThreadLog) {
         this.api = api;
@@ -27,6 +29,7 @@ public class CommonProvider {
         this.activeDatabaseActor = activeDatabaseActor;
         this.activeCacheHandler = activeCacheHandler;
         this.logApiResponse = logApiResponse;
+        this.isLobby = isLobby;
         this.cacheHandlerTimer = cacheHandlerTimer;
         this.nThreadLog = nThreadLog;
     }
@@ -85,6 +88,14 @@ public class CommonProvider {
      */
     public boolean hasLogApiResponse() {
         return logApiResponse;
+    }
+
+    /**
+     *
+     * @return {@code true} if the server is a lobby, {@code false} otherwise
+     */
+    public boolean isLobbyServer() {
+        return isLobby;
     }
 
     /**
