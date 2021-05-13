@@ -16,6 +16,7 @@ public interface UserManager {
     /**
      * Used to look up a user by their minecraft account name
      * Can be unsafe
+     * Query's the user in the Mongo Database
      * @param name the user's name
      * @return an optional of {@link User}
      */
@@ -23,14 +24,15 @@ public interface UserManager {
 
     /**
      * Used to look a user by their unique ID
+     * Query's the user in the cache memory (Redis)
      * @param uuid the user's unique ID {@link UUID}
      * @return the {@link User}
      */
     User getUser(UUID uuid);
 
     /**
-     * Used when a players logs off the Network or
-     * to save some values
+     * Used to save some new values of a user
+     * Saves the users in the cache memory (Redis)
      * @param user the new user with updated values
      * @return the updated {@link User}
      */
@@ -41,7 +43,16 @@ public interface UserManager {
      * @param uuid the users unique ID {@link UUID}
      * @return the {@link User}
      */
-    User getCacheUser(UUID uuid);
+    User getDBUser(UUID uuid);
+
+    /**
+     * Used when a players logs off the Network or
+     * to save some values
+     * Saves the users in the Mongo Database
+     * @param user the new user with updated values
+     * @return the updated {@link User}
+     */
+    User saveUserToDatabase(User user);
 
     /**
      * Get a user's formatted name
