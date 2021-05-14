@@ -9,9 +9,10 @@ public interface UserManager {
      * Checks if the user is registered in the database (Higher performances)
      * Updates the user's schema depending on the api version
      * @param uuid the user's unique ID
+     * @param name the user's name
      * @return the {@link User}
      */
-    User loadUser(UUID uuid);
+    User loadUser(UUID uuid, String name);
 
     /**
      * Used to look up a user by their minecraft account name
