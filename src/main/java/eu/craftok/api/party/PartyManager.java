@@ -19,6 +19,13 @@ public interface PartyManager {
     Party getPartyByLeader(UUID uuid);
 
     /**
+     * Create a party
+     * @param uuid the {@link #getPartyByLeader(UUID)} Unique Id
+     * @return {@link Party}
+     */
+    Party createParty(UUID uuid);
+
+    /**
      *
      * @param uuid a player's Unique Id
      * @return {@code true} if the player is in a party, {@code false} if not
