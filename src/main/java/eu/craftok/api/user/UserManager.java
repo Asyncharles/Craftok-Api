@@ -40,11 +40,18 @@ public interface UserManager {
     User saveUser(User user);
 
     /**
-     * Used to look a user by their unique ID in the cache memory
+     * Used to look a user by their unique ID in the mongo database
      * @param uuid the users unique ID {@link UUID}
      * @return the {@link User}
      */
     User getDBUser(UUID uuid);
+
+    /**
+     * Used to look a user by their name in the mongo database
+     * @param name the users name
+     * @return an {@link Optional} of {@link User}
+     */
+    Optional<User> getDBUserByName(String name);
 
     /**
      * Used when a players logs off the Network or
