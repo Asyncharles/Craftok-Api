@@ -1,7 +1,5 @@
 package eu.craftok.api.party;
 
-import com.sun.xml.internal.ws.wsdl.writer.document.Part;
-
 import java.util.List;
 import java.util.UUID;
 
@@ -29,6 +27,11 @@ public interface Party {
      * @return {@code true} if the party chat is muted, {@code false} otherwise
      */
     boolean isMuted();
+
+    /**
+     * Toggle the party chat mute
+     */
+    void toggleMute();
 
     /**
      * Add a member to the party
