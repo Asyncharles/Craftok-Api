@@ -142,6 +142,12 @@ public interface User {
     void addCoins(int amount);
 
     /**
+     * Remove coins to the user
+     * @param amout the value removed to the user's current amount of coins
+     */
+    void removeCoins(int amout);
+
+    /**
      * Set a user's coin amount
      * @param coins the new value of the user's coins amount, {@code 0} to reset
      */
