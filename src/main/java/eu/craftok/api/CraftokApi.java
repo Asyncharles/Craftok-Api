@@ -1,6 +1,7 @@
 package eu.craftok.api;
 
 import eu.craftok.api.network.CraftokNetwork;
+import eu.craftok.api.party.PartyManager;
 import eu.craftok.api.punishments.PunishmentManager;
 import eu.craftok.api.rank.GroupManager;
 import eu.craftok.api.staff.StaffOptionManager;
@@ -50,4 +51,10 @@ public interface CraftokApi {
      * @return the {@link CraftokNetwork} instance
      */
     CraftokNetwork getCraftokNetwork();
+
+    /**
+     *
+     * @return the {@link PartyManager} instance
+     */
+    PartyManager getPartyManager();
 }
