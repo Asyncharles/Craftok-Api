@@ -1,6 +1,7 @@
 package eu.craftok.api.party;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface PartyManager {
@@ -16,7 +17,7 @@ public interface PartyManager {
      * @param uuid the {@link UUID} of the party leader
      * @return {@link Party}
      */
-    Party getPartyByLeader(UUID uuid);
+    Optional<Party> getPartyByLeader(UUID uuid);
 
     /**
      * Create a party
