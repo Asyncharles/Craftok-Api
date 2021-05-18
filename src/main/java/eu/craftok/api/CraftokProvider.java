@@ -19,7 +19,7 @@ public class CraftokProvider {
     private static int cacheHandlerTimer;
     private static int nThreadLog;
 
-    public final static String API_VERSION = "0.4.2";
+    public final static String API_VERSION = "0.4.3";
 
     protected CraftokProvider(boolean tabOverride, boolean nameTagOverride, boolean chatFormatOverride, boolean activeDatabaseActor, boolean activeCacheHandler, boolean logApiResponse, boolean isLobby, int cacheHandlerTimer, int nThreadLog) {
         CraftokProvider.tabOverride = tabOverride;
