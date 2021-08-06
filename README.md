@@ -1,6 +1,6 @@
 ## Craftok Private API
 
-API officiel de Craftok, ce projet n'est pour le moment pas public.
+Ancienne Private API de Craftok. L'API actuelle est totalement differente.
 
 ## Java Code Rules
 Cette intégration doit respecter les standards de développement d'Oracle ainsi que Google.  
