@@ -1,6 +1,6 @@
 ## Craftok Private API
 
-Ancienne Private API de Craftok. L'API actuelle est totalement differente - Ce projet a ete mis en open-source avec l'intention de montrer comment Craftok avait ete developpeur au debut, et non de nuire a ce dernier. Toute tentative d'utilisation ou de copie de cet api est vain car elle est obslete et sans common.
+Ancienne Private API de Craftok. L'API actuelle est totalement differente - Ce projet a ete mis en open-source avec l'intention de montrer comment Craftok avait ete developpeur au debut, et non de nuire a ce dernier. Toute tentative d'utilisation ou de copie de cette api est vain car elle est obslete et sans common.
 
 ## Java Code Rules
 Cette intégration doit respecter les standards de développement d'Oracle ainsi que Google.  
